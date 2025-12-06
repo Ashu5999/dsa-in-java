@@ -26,7 +26,7 @@ public class addinmid {
         head = newNode;
     }
 
-    public void add(int idx , int data){
+    public void add(int idx , int data){   // add  in mid
         if(idx == 0){
             addFirst(data);
             return;

@@ -68,7 +68,7 @@ public class removeNode {
         for(int i =0; i<size-2;i++){
             prev = prev.next;
         }
-        prev.next = null;
+        prev.next = null; 
         tail = prev;
         size--;
     }
