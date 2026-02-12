@@ -1,0 +1,12 @@
+# Ignore macOS DS_Store
+.DS_Store
+
+# Java build artifacts
+*.class
+
+# IDEA
+.idea/
+*.iml
+
+# VSCode
+.vscode/
