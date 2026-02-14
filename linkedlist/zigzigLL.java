@@ -102,7 +102,7 @@ public class zigzigLL {
 
         // Before
         ll.print();
-
+        // ZigZag
         ll.zigzag();
 
         // After
