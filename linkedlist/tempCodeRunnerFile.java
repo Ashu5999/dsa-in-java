@@ -1,65 +1,73 @@
-public class PrintAll {
-    
-    public static class Node {
+public class DublyLL {
+     
+    public class Node{
         int data;
         Node next;
+        Node prev;
 
-        public Node(int data) {
+        public Node(int data){
             this.data = data;
             this.next = null;
+            this.prev = null;
         }
     }
-
 
     public static Node head;
     public static Node tail;
+    public static int size;
 
-   
-    public void addFirst(int data) {
-        Node newNode = new Node(data);
-        if (head == null) {
-            head = tail = newNode;
+         // Add first
+         public  void addfirst(int data){
+            Node newNode = new Node(data);
+            size++;
+            if(head==null){
+                head = tail= newNode;
+                return;
+            }
+
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+         }
+
+          public void removefirst(){
+           if(head== null){
+            System.out.println("ll is empty");
             return;
-        }
-        newNode.next = head;
-        head = newNode;
-    }
+           }
 
-  
-    public void addLast(int data) {
-        Node newNode = new Node(data);
-        if (head == null) {
-            head = tail = newNode;
-            return;
-        }
-        tail.next = newNode;
-        tail = newNode;
-    }
+          if(head.next == null){
+            head = tail = null;
+            size--;
+            return ;
+          }
 
-    public void print() {
-        if (head == null) {
-            System.out.println("LL is empty");
-            return;
-        }
-        Node temp = head;
-        while (temp != null) {
-            System.out.print(temp.data + "->");
-            temp = temp.next;
-        }
-        System.out.println("null");
-    }
+        head = head.next;
+        head.prev = null;
+        size--;
+         }
 
-    public static void main(String args[]) {
-        PrintAll ll = new PrintAll();
+         public void print(){
+            Node temp = head;
+            while(temp!= null){
+                System.out.print(temp.data+"<->");
+                temp = temp.next;
+            }  
+            System.out.println("null");}
 
-        ll.print();
-        ll.addFirst(2);
-        ll.print();
-        ll.addFirst(1);
-        ll.print();
-        ll.addLast(3);
-        ll.print();
-        ll.addLast(4);
-        ll.print();
+
+    public static void main (String[] args){
+     DublyLL dll = new DublyLL();
+        dll.addfirst(3);
+        dll.addfirst(2);
+        dll.addfirst(1);
+
+        dll.print();
+        System.out.println(size);
+
+        System.out.println("after removing first");
+        dll.removefirst();
+        dll.print();
+        System.out.println(size);
     }
 }

@@ -30,6 +30,23 @@ public class DublyLL {
             head = newNode;
          }
 
+          public void removefirst(){
+           if(head== null){
+            System.out.println("ll is empty");
+            return;
+           }
+
+          if(head.next == null){
+            head = tail = null;
+            size--;
+            return ;
+          }
+
+        head = head.next;
+        head.prev = null;
+        size--;
+         }
+
          public void print(){
             Node temp = head;
             while(temp!= null){
@@ -45,6 +62,11 @@ public class DublyLL {
         dll.addfirst(2);
         dll.addfirst(1);
 
+        dll.print();
+        System.out.println(size);
+
+        System.out.println("after removing first");
+        dll.removefirst();
         dll.print();
         System.out.println(size);
     }
