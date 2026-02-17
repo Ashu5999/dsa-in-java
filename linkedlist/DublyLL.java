@@ -86,7 +86,7 @@ public class DublyLL {
 
         // System.out.println("after removing first");
         // dll.removefirst();
-        // dll.print();
+        // dll.print();.....
         // System.out.println(size);
         System.out.println("reverse a ll");
         dll.reverse();
