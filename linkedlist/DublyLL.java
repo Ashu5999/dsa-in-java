@@ -29,7 +29,7 @@ public class DublyLL {
             head.prev = newNode;
             head = newNode;
          }
-
+        // remove first 
           public void removefirst(){
            if(head== null){
             System.out.println("ll is empty");
@@ -41,11 +41,14 @@ public class DublyLL {
             size--;
             return ;
           }
-
+         
         head = head.next;
         head.prev = null;
         size--;
          }
+
+
+        // print ll 
 
          public void print(){
             Node temp = head;
@@ -54,6 +57,22 @@ public class DublyLL {
                 temp = temp.next;
             }  
             System.out.println("null");}
+
+            // reverse a ll
+            public void reverse(){
+                Node curr = head ;
+               Node prev = null;
+               Node next;
+
+               while(curr!= null){
+               next = curr.next ;
+               curr.next = prev;
+               curr.prev = next;
+               prev = curr;
+               curr = next ;
+               }
+                head = prev;
+            }
 
 
     public static void main (String[] args){
@@ -65,9 +84,12 @@ public class DublyLL {
         dll.print();
         System.out.println(size);
 
-        System.out.println("after removing first");
-        dll.removefirst();
+        // System.out.println("after removing first");
+        // dll.removefirst();
+        // dll.print();
+        // System.out.println(size);
+        System.out.println("reverse a ll");
+        dll.reverse();
         dll.print();
-        System.out.println(size);
     }
 }
