@@ -71,7 +71,7 @@ public class palindrome {
         return true;
 
         }       
-
+//main method
         public static void main(String args[]){
           palindrome ll = new palindrome();
 
