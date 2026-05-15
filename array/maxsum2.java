@@ -11,7 +11,7 @@ public class maxsum2 {
           prefix[i]= prefix[i-1] + num[i];
        }
 
-        for(int i=0; i<num.length; i++){
+       for(int i=0; i<num.length; i++){
             for(int j=i; j<num.length; j++){
                  currSum= i== 0? prefix[j] : prefix[j]-prefix[i];
                 
