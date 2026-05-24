@@ -1,6 +1,6 @@
 package practiceWork;
 import java.util.*;
-public class TransposeMat {
+public class TransposeSqMat {
    public static void main(String args[]){ // for in same matrix transpose is possible for only square matrix
     Scanner sc = new Scanner(System.in);
     int n= sc.nextInt();
