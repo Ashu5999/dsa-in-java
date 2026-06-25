@@ -24,7 +24,7 @@ public class NextGreEle {
         }
 
         for(int i = 0; i<result.length;i++){
-            System.out.println(result[i]);
+            System.out.println(result[i]);  // this loop is used to print the result array which contains the next greater element for each element in the input array.
         }
     }
 }
